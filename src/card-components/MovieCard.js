@@ -30,11 +30,10 @@ const posterMap = {
 export default class MovieCard extends Component {
 
   render() {
-    console.log(this.props)
     return (
       <div className="movie-card">
-        <CardFront poster={this.props.poster} />
-        <CardBack title={this.props.title} genre={this.props.genres} IMDBRating={this.props.IMDBRating}/>
+        <CardFront poster={posterMap[this.props.poster]} />
+        <CardBack title={this.props.title} genres={this.props.genres} IMDBRating={this.props.IMDBRating}/>
       </div>
     )
   }
